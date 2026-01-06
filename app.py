@@ -85,7 +85,7 @@ def load_resources():
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
     # Recreate the exact architecture used in training (ResNet34)
-    model = models.resnet34(pretrained=False) # No need for internet weights, we have our own
+    model = models.resnet34(weights=None) # No need for internet weights, we have our own
     num_ftrs = model.fc.in_features
     model.fc = nn.Linear(num_ftrs, len(class_names))
 
@@ -150,7 +150,7 @@ if uploaded_file is not None:
     col1, col2, col3 = st.columns([1, 2, 1])
     with col2:
         image = Image.open(uploaded_file).convert('RGB')
-        st.image(image, caption='Uploaded Leaf', use_column_width=True)
+        st.image(image, caption='Uploaded Leaf', use_container_width=True)
 
     # Prediction Button
     if st.button("Analyze Plant 🔍"):

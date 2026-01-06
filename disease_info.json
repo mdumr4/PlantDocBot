@@ -1,0 +1,192 @@
+{
+    "Apple___Apple_scab": {
+        "name": "Apple - Apple scab",
+        "description": "Detected symptoms of Apple - Apple scab. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Apple___Black_rot": {
+        "name": "Apple - Black rot",
+        "description": "Detected symptoms of Apple - Black rot. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Apple___Cedar_apple_rust": {
+        "name": "Apple - Cedar apple rust",
+        "description": "Detected symptoms of Apple - Cedar apple rust. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Apple___healthy": {
+        "name": "Apple - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    },
+    "Blueberry___healthy": {
+        "name": "Blueberry - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    },
+    "Cherry_(including_sour)___Powdery_mildew": {
+        "name": "Cherry (including sour) - Powdery mildew",
+        "description": "Detected symptoms of Cherry (including sour) - Powdery mildew. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Cherry_(including_sour)___healthy": {
+        "name": "Cherry (including sour) - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    },
+    "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+        "name": "Corn (maize) - Cercospora leaf spot Gray leaf spot",
+        "description": "Detected symptoms of Corn (maize) - Cercospora leaf spot Gray leaf spot. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Corn_(maize)___Common_rust_": {
+        "name": "Corn (maize) - Common rust ",
+        "description": "Detected symptoms of Corn (maize) - Common rust . This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Corn_(maize)___Northern_Leaf_Blight": {
+        "name": "Corn (maize) - Northern Leaf Blight",
+        "description": "Detected symptoms of Corn (maize) - Northern Leaf Blight. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Corn_(maize)___healthy": {
+        "name": "Corn (maize) - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    },
+    "Grape___Black_rot": {
+        "name": "Grape - Black rot",
+        "description": "Detected symptoms of Grape - Black rot. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Grape___Esca_(Black_Measles)": {
+        "name": "Grape - Esca (Black Measles)",
+        "description": "Detected symptoms of Grape - Esca (Black Measles). This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+        "name": "Grape - Leaf blight (Isariopsis Leaf Spot)",
+        "description": "Detected symptoms of Grape - Leaf blight (Isariopsis Leaf Spot). This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Grape___healthy": {
+        "name": "Grape - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    },
+    "Orange___Haunglongbing_(Citrus_greening)": {
+        "name": "Orange - Haunglongbing (Citrus greening)",
+        "description": "Detected symptoms of Orange - Haunglongbing (Citrus greening). This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Peach___Bacterial_spot": {
+        "name": "Peach - Bacterial spot",
+        "description": "Detected symptoms of Peach - Bacterial spot. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Peach___healthy": {
+        "name": "Peach - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    },
+    "Pepper,_bell___Bacterial_spot": {
+        "name": "Pepper, bell - Bacterial spot",
+        "description": "Detected symptoms of Pepper, bell - Bacterial spot. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Pepper,_bell___healthy": {
+        "name": "Pepper, bell - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    },
+    "Potato___Early_blight": {
+        "name": "Potato - Early blight",
+        "description": "Detected symptoms of Potato - Early blight. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Potato___Late_blight": {
+        "name": "Potato - Late blight",
+        "description": "Detected symptoms of Potato - Late blight. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Potato___healthy": {
+        "name": "Potato - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    },
+    "Raspberry___healthy": {
+        "name": "Raspberry - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    },
+    "Soybean___healthy": {
+        "name": "Soybean - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    },
+    "Squash___Powdery_mildew": {
+        "name": "Squash - Powdery mildew",
+        "description": "Detected symptoms of Squash - Powdery mildew. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Strawberry___Leaf_scorch": {
+        "name": "Strawberry - Leaf scorch",
+        "description": "Detected symptoms of Strawberry - Leaf scorch. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Strawberry___healthy": {
+        "name": "Strawberry - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    },
+    "Tomato___Bacterial_spot": {
+        "name": "Tomato - Bacterial spot",
+        "description": "Detected symptoms of Tomato - Bacterial spot. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Tomato___Early_blight": {
+        "name": "Tomato - Early blight",
+        "description": "Detected symptoms of Tomato - Early blight. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Tomato___Late_blight": {
+        "name": "Tomato - Late blight",
+        "description": "Detected symptoms of Tomato - Late blight. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Tomato___Leaf_Mold": {
+        "name": "Tomato - Leaf Mold",
+        "description": "Detected symptoms of Tomato - Leaf Mold. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Tomato___Septoria_leaf_spot": {
+        "name": "Tomato - Septoria leaf spot",
+        "description": "Detected symptoms of Tomato - Septoria leaf spot. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Tomato___Spider_mites Two-spotted_spider_mite": {
+        "name": "Tomato - Spider mites Two-spotted spider mite",
+        "description": "Detected symptoms of Tomato - Spider mites Two-spotted spider mite. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Tomato___Target_Spot": {
+        "name": "Tomato - Target Spot",
+        "description": "Detected symptoms of Tomato - Target Spot. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+        "name": "Tomato - Tomato Yellow Leaf Curl Virus",
+        "description": "Detected symptoms of Tomato - Tomato Yellow Leaf Curl Virus. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Tomato___Tomato_mosaic_virus": {
+        "name": "Tomato - Tomato mosaic virus",
+        "description": "Detected symptoms of Tomato - Tomato mosaic virus. This typically manifests as discolored spots or wilting.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy."
+    },
+    "Tomato___healthy": {
+        "name": "Tomato - healthy",
+        "description": "The plant appears healthy. Keep monitoring for any changes.",
+        "treatment": "Continue regular care (watering, sunlight)."
+    }
+}

@@ -11,13 +11,23 @@
 # ==========================================
 
 import os
+
+# --- AUTO-INSTALL DEPENDENCIES ---
+try:
+    import opendatasets as od
+except ImportError:
+    print("Installing opendatasets...")
+    os.system('pip install opendatasets')
+    import opendatasets as od
+
 import torch
 import torch.nn as nn
 import torch.optim as optim
 from torchvision import datasets, transforms, models
 from torch.utils.data import DataLoader
 import matplotlib.pyplot as plt
-import opendatasets as od
+from sklearn.metrics import classification_report, accuracy_score, precision_recall_fscore_support
+import numpy as np
 from sklearn.metrics import classification_report, accuracy_score, precision_recall_fscore_support
 import numpy as np
 

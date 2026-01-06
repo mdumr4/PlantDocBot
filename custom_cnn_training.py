@@ -6,7 +6,14 @@ import torch.nn as nn
 import torch.optim as optim
 from torch.utils.data import DataLoader
 from torchvision import datasets, transforms
-import opendatasets as od
+
+try:
+    import opendatasets as od
+except ImportError:
+    import os
+    os.system('pip install opendatasets')
+    import opendatasets as od
+
 import os
 from sklearn.metrics import classification_report, precision_recall_fscore_support, accuracy_score
 
