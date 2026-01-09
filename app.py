@@ -1,10 +1,9 @@
+
 import streamlit as st
-import torch
-import torch.nn as nn
-from torchvision import models, transforms
 from PIL import Image
-import json
-import os
+import torch
+import numpy as np
+from utils import load_models_and_data, predict_image, predict_text_bert, predict_text_sbert
 
 # ==========================================
 # CONFIGURATION & STYLE
@@ -19,9 +18,7 @@ st.set_page_config(
 # Custom CSS for a Premium Look
 st.markdown("""
 <style>
-    .main {
-        background-color: #f5f7f9;
-    }
+    .main { background-color: #f5f7f9; }
     .stButton>button {
         background-color: #2e7d32;
         color: white;
@@ -30,21 +27,13 @@ st.markdown("""
         padding: 10px 24px;
         font-weight: bold;
     }
-    .stButton>button:hover {
-        background-color: #1b5e20;
-    }
-    .stAlert {
-        border-radius: 10px;
-    }
+    .stButton>button:hover { background-color: #1b5e20; }
     .title-text {
         color: #1b5e20;
         text-align: center;
         font-family: 'Helvetica Neue', sans-serif;
     }
-    .subtitle-text {
-        text-align: center;
-        color: #555;
-    }
+    .subtitle-text { text-align: center; color: #555; }
     .prediction-card {
         background-color: white;
         padding: 20px;
@@ -57,143 +46,119 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ==========================================
-# MODEL LOADING
+# LOAD RESOURCES
 # ==========================================
-@st.cache_resource
-def load_resources():
-    """
-    Loads the model, class names, and disease info.
-    Cached prevents reloading on every button click.
-    """
-    # 1. Load Class Names
-    if not os.path.exists("class_names.txt"):
-        return None, None, None, "MISSING_CLASSES"
-
-    with open("class_names.txt", "r") as f:
-        class_names = [line.strip() for line in f.readlines()]
-
-    # 2. Load Disease Info (Treatments)
-    disease_info = {}
-    if os.path.exists("disease_info.json"):
-        with open("disease_info.json", "r") as f:
-            disease_info = json.load(f)
-
-    # 3. Load Model
-    if not os.path.exists("plant_doctor_model.pth"):
-        return None, class_names, disease_info, "MISSING_MODEL"
-
-    device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
-    # Recreate the exact architecture used in training (ResNet34)
-    model = models.resnet34(weights=None) # No need for internet weights, we have our own
-    num_ftrs = model.fc.in_features
-    model.fc = nn.Linear(num_ftrs, len(class_names))
-
-    try:
-        model.load_state_dict(torch.load("plant_doctor_model.pth", map_location=device))
-        model.to(device)
-        model.eval()
-    except Exception as e:
-        return None, class_names, disease_info, f"MODEL_ERROR: {str(e)}"
-
-    return model, class_names, disease_info, "SUCCESS"
-
-model, class_names, disease_info, status = load_resources()
-
-# ==========================================
-# PREPROCESSING
-# ==========================================
-def process_image(image):
-    transform = transforms.Compose([
-        transforms.Resize((224, 224)),
-        transforms.ToTensor(),
-        transforms.Normalize([0.485, 0.456, 0.406],
-                             [0.229, 0.224, 0.225])
-    ])
-    return transform(image).unsqueeze(0) # Add batch dimension
+model_viz, model_text, bert_pipe, class_names, disease_info, kb_embeddings, status = load_models_and_data()
 
 # ==========================================
 # UI LAYOUT
 # ==========================================
 st.markdown("<h1 class='title-text'>🌿 PlantDocBot</h1>", unsafe_allow_html=True)
-st.markdown("<p class='subtitle-text'>AI-Powered Plant Disease Diagnosis & Treatment</p>", unsafe_allow_html=True)
+st.markdown("<p class='subtitle-text'>Multi-Modal Diagnosis: Image, Text, or Both</p>", unsafe_allow_html=True)
 
 # --- SIDEBAR ---
 with st.sidebar:
-    st.header("Project Status")
-
-    if status == "SUCCESS":
-        st.success("✅ System Online")
-        st.info(f"Loaded {len(class_names)} Disease Classes")
-    elif status == "MISSING_MODEL":
-        st.error("❌ Model Missing")
-        st.warning("Please place 'plant_doctor_model.pth' in this folder.")
-    elif status == "MISSING_CLASSES":
-        st.error("❌ Classes Missing")
-        st.warning("Please place 'class_names.txt' in this folder.")
+    st.header("System Status")
+    if "SUCCESS" in str(status):
+        st.success("✅ Models Loaded")
+        text_model_name = "Custom BERT (Expert)" if bert_pipe else "SBERT (Semantic Search)"
+        st.caption(f"• Visual: ResNet34\n• Text: {text_model_name}")
     else:
-        st.error(f"System Error: {status}")
+        st.error(f"❌ Error: {status}")
 
-    st.markdown("---")
-    st.markdown("### How to use")
-    st.markdown("1. Upload a clear photo of a plant leaf.")
-    st.markdown("2. The AI will analyze the patterns.")
-    st.markdown("3. Get instant diagnosis and treatment advice.")
+# --- TABS ---
+tab1, tab2, tab3 = st.tabs(["📷 Image Only", "📝 Text Only", "🧪 Hybrid (Best)"])
 
-# --- MAIN CONTENT ---
+# 1. IMAGE ONLY
+with tab1:
+    uploaded_file = st.file_uploader("Upload Leaf Image", type=["jpg", "png", "jpeg"], key="img_only")
+    if uploaded_file and st.button("Analyze Image 📷"):
+        col1, col2 = st.columns([1, 2])
+        with col1:
+            image = Image.open(uploaded_file).convert('RGB')
+            st.image(image, width="stretch")
+        with col2:
+            if model_viz:
+                pred_class, score, _ = predict_image(model_viz, image, class_names)
 
-# File Uploader
-uploaded_file = st.file_uploader("Upload a Plant Leaf Image", type=["jpg", "png", "jpeg"])
+                st.markdown(f"### Result: **{pred_class}**")
+                st.progress(int(score))
+                st.caption(f"Confidence: {score:.1f}%")
 
-if uploaded_file is not None:
-    # Display the image
-    col1, col2, col3 = st.columns([1, 2, 1])
-    with col2:
-        image = Image.open(uploaded_file).convert('RGB')
-        st.image(image, caption='Uploaded Leaf', use_container_width=True)
-
-    # Prediction Button
-    if st.button("Analyze Plant 🔍"):
-        if status != "SUCCESS":
-            st.error("Cannot predict: System files are missing (Model or Class Names).")
-        else:
-            with st.spinner(" analyzing leaf texture and patterns..."):
-                # Prediction Logic
-                device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-                img_tensor = process_image(image).to(device)
-
-                with torch.no_grad():
-                    outputs = model(img_tensor)
-                    probabilities = torch.nn.functional.softmax(outputs, dim=1)
-                    confidence, predicted_idx = torch.max(probabilities, 1)
-
-                    predicted_class = class_names[predicted_idx.item()]
-                    confidence_score = confidence.item() * 100
-
-            # Display Results
-            st.markdown(f"""
-            <div class='prediction-card'>
-                <h2>Diagnosis: <span style='color: #2e7d32;'>{predicted_class}</span></h2>
-                <p>Confidence: <b>{confidence_score:.1f}%</b></p>
-            </div>
-            """, unsafe_allow_html=True)
-
-            # Recommendation Section
-            st.markdown("### 💊 Treatment & Recommendations")
-
-            # Try to find infoKey that matches the predicted class
-            # The disease info keys might not match exactly if loaded from a different format,
-            # so we try direct lookup or simple normalization.
-            info = disease_info.get(predicted_class)
-
-            if info:
-                st.info(f"**Description:** {info.get('description', 'No description.')}")
-                st.success(f"**Treatment:** {info.get('treatment', 'No specific treatment in database.')}")
+                info = disease_info.get(pred_class, {})
+                if info:
+                    st.info(f"**Description:** {info.get('description')}")
+                    st.success(f"**Treatment:** {info.get('treatment')}")
             else:
-                # Fallback if specific json key not found
-                st.warning("No specific treatment details found in database for this exact label.")
-                st.markdown(f"**Suggested Actions:** Search online for *'{predicted_class} treatment'*.")
+                st.error("Visual model not loaded.")
 
-else:
-    # Empty State
-    st.info("👆 Upload an image to get started.")
+# 2. TEXT ONLY
+with tab2:
+    user_text = st.text_area("Describe the symptoms", placeholder="e.g. Tomato leaves have dark brown circles...")
+    if user_text and st.button("Analyze Symptoms 📝"):
+        if bert_pipe:
+            best_class, best_score, _ = predict_text_bert(bert_pipe, user_text, class_names)
+            st.caption("Used Custom BERT Model")
+        else:
+            best_class, best_score, _, _ = predict_text_sbert(model_text, kb_embeddings, user_text, class_names)
+            st.caption("Used SBERT Semantic Search")
+
+        st.markdown(f"### Result: **{best_class}**")
+        st.progress(int(min(best_score, 100)))
+        st.caption(f"Confidence: {best_score:.1f}%")
+
+        info = disease_info.get(best_class, {})
+        if info:
+            st.info(f"**Description:** {info.get('description')}")
+            st.success(f"**Treatment:** {info.get('treatment')}")
+
+# 3. HYBRID
+with tab3:
+    st.info("💡 Combines **Image (70%)** and **Text (30%)**.")
+    h_file = st.file_uploader("Upload Leaf Image", type=["jpg", "png", "jpeg"], key="hybrid_img")
+    h_text = st.text_area("Describe Symptoms (Optional)", key="hybrid_txt")
+
+    if h_file and st.button("Run Hybrid Analysis 🧪"):
+        # Image
+        image = Image.open(h_file).convert('RGB')
+        st.image(image, width="stretch")
+        _, _, img_probs = predict_image(model_viz, image, class_names)
+
+        # Text
+        text_scores = np.zeros(len(class_names))
+        if h_text.strip():
+            if bert_pipe:
+                _, _, b_idx = predict_text_bert(bert_pipe, h_text, class_names)
+                text_scores[b_idx] = 1.0 # Give full weight to predicted class (simplification for hybrid)
+                # Note: For smoother hybrid, maybe we want raw logits? But simplified is okay.
+                # Actually, BERT score is ~0.99 usually.
+                pred = bert_pipe(h_text)[0]
+                text_scores[b_idx] = pred['score']
+                st.caption("Mixed with BERT Prediction")
+            else:
+                _, _, cos_scores, _ = predict_text_sbert(model_text, kb_embeddings, h_text, class_names)
+                text_scores = np.maximum(cos_scores, 0)
+        else:
+             st.caption("⚠️ No text provided. Using 100% Image Mode.")
+
+        # Weighted Combination
+        if h_text.strip():
+            final_scores = (img_probs * 0.7) + (text_scores * 0.3)
+        else:
+            final_scores = img_probs
+
+        best_idx = np.argmax(final_scores)
+        best_class = class_names[best_idx]
+        final_conf = final_scores[best_idx] * 100
+
+        st.markdown(f"""
+        <div class='prediction-card'>
+            <h2>Hybrid Diagnosis: <span style='color: #2e7d32;'>{best_class}</span></h2>
+            <p>Combined Confidence: <b>{final_conf:.1f}%</b></p>
+        </div>
+        """, unsafe_allow_html=True)
+
+        info = disease_info.get(best_class, {})
+        if info:
+            st.info(f"**Description:** {info.get('description')}")
+            st.success(f"**Treatment:** {info.get('treatment')}")

@@ -1,0 +1,230 @@
+{
+    "Apple___Apple_scab": {
+        "name": "Apple - Apple scab",
+        "description": "Velvety, olive-green to black spots on leaves and fruit. Leaves may turn yellow and drop early. Fruit may be deformed or cracked.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Velvety, olive-green to black spots on leaves and fruit. Leaves may turn yellow and drop early. Fruit may be deformed or cracked."
+    },
+    "Apple___Black_rot": {
+        "name": "Apple - Black rot",
+        "description": "Firm, reddish-brown, circular spots on fruit that turn black and rotten. Leaves show frog-eye leaf spots (circular brown spots with purple margins).",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Firm, reddish-brown, circular spots on fruit that turn black and rotten. Leaves show frog-eye leaf spots (circular brown spots with purple margins)."
+    },
+    "Apple___Cedar_apple_rust": {
+        "name": "Apple - Cedar apple rust",
+        "description": "Bright yellow-orange spots on upper leaf surface, later developing tiny black dots. Underside of leaves may have tube-like structures.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Bright yellow-orange spots on upper leaf surface, later developing tiny black dots. Underside of leaves may have tube-like structures."
+    },
+    "Apple___healthy": {
+        "name": "Apple - healthy",
+        "description": "Leaves are vibrant green. No dark spots. No rust. No brown lesions. No yellowing. Fruit is firm and unblemished.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Leaves are vibrant green. No dark spots. No rust. No brown lesions. No yellowing. Fruit is firm and unblemished."
+    },
+    "Blueberry___healthy": {
+        "name": "Blueberry - healthy",
+        "description": "Leaves are dark green, glossy. No spots. No red discoloration. Stems are sturdy.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Leaves are dark green, glossy. No spots. No red discoloration. Stems are sturdy."
+    },
+    "Cherry_(including_sour)___Powdery_mildew": {
+        "name": "Cherry (including sour) - Powdery mildew",
+        "description": "White, powdery fungus growth on leaves and fruit. Leaves may curl upward or become distorted.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "White, powdery fungus growth on leaves and fruit. Leaves may curl upward or become distorted."
+    },
+    "Cherry_(including_sour)___healthy": {
+        "name": "Cherry (including sour) - healthy",
+        "description": "Foliage is green and clean. No white powdery fungus. No curling. No holes.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Foliage is green and clean. No white powdery fungus. No curling. No holes."
+    },
+    "Corn_(maize)___Cercospora_leaf_spot Gray_leaf_spot": {
+        "name": "Corn (maize) - Cercospora leaf spot Gray leaf spot",
+        "description": "Small, rectangular, tan to brown lesions on leaves, often limited by leaf veins. Lesions turn gray with age.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Small, rectangular, tan to brown lesions on leaves, often limited by leaf veins. Lesions turn gray with age."
+    },
+    "Corn_(maize)___Common_rust_": {
+        "name": "Corn (maize) - Common rust ",
+        "description": "Small, powdery, cinnamon-brown to red pustules on both leaf surfaces. Pustules turn black as plants mature.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Small, powdery, cinnamon-brown to red pustules on both leaf surfaces. Pustules turn black as plants mature."
+    },
+    "Corn_(maize)___Northern_Leaf_Blight": {
+        "name": "Corn (maize) - Northern Leaf Blight",
+        "description": "Long, elliptical, grayish-green or tan lesions ('cigar-shaped') on leaves. Can cause significant blight.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Long, elliptical, grayish-green or tan lesions ('cigar-shaped') on leaves. Can cause significant blight."
+    },
+    "Corn_(maize)___healthy": {
+        "name": "Corn (maize) - healthy",
+        "description": "Stalks are strong. Leaves are uniform green. No streaks. No gray spots. No rust pustules.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Stalks are strong. Leaves are uniform green. No streaks. No gray spots. No rust pustules."
+    },
+    "Grape___Black_rot": {
+        "name": "Grape - Black rot",
+        "description": "Reddish-brown spots on leaves. Fruit shrivels into hard, black, wrinkled 'mummies'.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Reddish-brown spots on leaves. Fruit shrivels into hard, black, wrinkled 'mummies'."
+    },
+    "Grape___Esca_(Black_Measles)": {
+        "name": "Grape - Esca (Black Measles)",
+        "description": "Yellowish or reddish stripes between leaf veins ('tiger stripes'). Fruit develops small, dark spots (measles).",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Yellowish or reddish stripes between leaf veins ('tiger stripes'). Fruit develops small, dark spots (measles)."
+    },
+    "Grape___Leaf_blight_(Isariopsis_Leaf_Spot)": {
+        "name": "Grape - Leaf blight (Isariopsis Leaf Spot)",
+        "description": "Irregular, dark red to brown spots on leaves with a yellow halo. Underside may have fuzzy growth.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Irregular, dark red to brown spots on leaves with a yellow halo. Underside may have fuzzy growth."
+    },
+    "Grape___healthy": {
+        "name": "Grape - healthy",
+        "description": "Vines are vigorous. Leaves are green and palm-shaped. No brown spots. No black rot. No shriveling.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Vines are vigorous. Leaves are green and palm-shaped. No brown spots. No black rot. No shriveling."
+    },
+    "Orange___Haunglongbing_(Citrus_greening)": {
+        "name": "Orange - Haunglongbing (Citrus greening)",
+        "description": "Yellowing of leaf veins or mottling (blotchy patches). Fruit remains small, green, and bitter (misshapen).",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Yellowing of leaf veins or mottling (blotchy patches). Fruit remains small, green, and bitter (misshapen)."
+    },
+    "Peach___Bacterial_spot": {
+        "name": "Peach - Bacterial spot",
+        "description": "Small, water-soaked spots on leaves that turn dark and may fall out ('shot hole' effect). Fruit has surface pitting or cracking.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Small, water-soaked spots on leaves that turn dark and may fall out ('shot hole' effect). Fruit has surface pitting or cracking."
+    },
+    "Peach___healthy": {
+        "name": "Peach - healthy",
+        "description": "Leaves are long, lance-shaped, and green. No bacterial spots. No holes. No curling.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Leaves are long, lance-shaped, and green. No bacterial spots. No holes. No curling."
+    },
+    "Pepper,_bell___Bacterial_spot": {
+        "name": "Pepper, bell - Bacterial spot",
+        "description": "Small, water-soaked spots on leaves and fruit. Spots turn brown/black and slightly raised.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Small, water-soaked spots on leaves and fruit. Spots turn brown/black and slightly raised."
+    },
+    "Pepper,_bell___healthy": {
+        "name": "Pepper, bell - healthy",
+        "description": "Leaves are smooth and green. No bacterial spots. No water-soaked lesions. Fruit is glossy.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Leaves are smooth and green. No bacterial spots. No water-soaked lesions. Fruit is glossy."
+    },
+    "Potato___Early_blight": {
+        "name": "Potato - Early blight",
+        "description": "Dark brown spots with concentric rings ('bullseye' pattern) on older leaves. Yellowing around spots.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Dark brown spots with concentric rings ('bullseye' pattern) on older leaves. Yellowing around spots."
+    },
+    "Potato___Late_blight": {
+        "name": "Potato - Late blight",
+        "description": "Large, irregular, dark green to black water-soaked lesions on leaves. White fuzzy mold on undersides in wet weather.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Large, irregular, dark green to black water-soaked lesions on leaves. White fuzzy mold on undersides in wet weather."
+    },
+    "Potato___healthy": {
+        "name": "Potato - healthy",
+        "description": "Foliage is bushy and green. No dark brown spots. No concentric rings. No mold.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Foliage is bushy and green. No dark brown spots. No concentric rings. No mold."
+    },
+    "Raspberry___healthy": {
+        "name": "Raspberry - healthy",
+        "description": "Canes are brown/green depending on variety. Leaves are clean. No spots. No yellowing.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Canes are brown/green depending on variety. Leaves are clean. No spots. No yellowing."
+    },
+    "Soybean___healthy": {
+        "name": "Soybean - healthy",
+        "description": "Leaves are trifoliate, green. No pustules. No yellowing. No leaf spots.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Leaves are trifoliate, green. No pustules. No yellowing. No leaf spots."
+    },
+    "Squash___Powdery_mildew": {
+        "name": "Squash - Powdery mildew",
+        "description": "White, talcum-like powder patches on leaves, stems, and fruit. Leaves may yellow and wither.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "White, talcum-like powder patches on leaves, stems, and fruit. Leaves may yellow and wither."
+    },
+    "Strawberry___Leaf_scorch": {
+        "name": "Strawberry - Leaf scorch",
+        "description": "Irregular, dark purple or reddish spots on leaves. The spots may coalesce, causing the leaf to look scorched or burnt.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Irregular, dark purple or reddish spots on leaves. The spots may coalesce, causing the leaf to look scorched or burnt."
+    },
+    "Strawberry___healthy": {
+        "name": "Strawberry - healthy",
+        "description": "Leaves are bright green with serrated edges. No purple spots. No red spots. No scorching.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Leaves are bright green with serrated edges. No purple spots. No red spots. No scorching."
+    },
+    "Tomato___Bacterial_spot": {
+        "name": "Tomato - Bacterial spot",
+        "description": "Small, dark, greasy-looking spots on leaves and stems. Fruit often has scab-like, raised brown spots.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Small, dark, greasy-looking spots on leaves and stems. Fruit often has scab-like, raised brown spots."
+    },
+    "Tomato___Early_blight": {
+        "name": "Tomato - Early blight",
+        "description": "Brown spots with concentric rings (target-like) on lower leaves first. Leaves turn yellow and drop.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Brown spots with concentric rings (target-like) on lower leaves first. Leaves turn yellow and drop."
+    },
+    "Tomato___Late_blight": {
+        "name": "Tomato - Late blight",
+        "description": "Large, irregular, pale green to brown lesions. White cottony growth on leaf undersides during high humidity.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Large, irregular, pale green to brown lesions. White cottony growth on leaf undersides during high humidity."
+    },
+    "Tomato___Leaf_Mold": {
+        "name": "Tomato - Leaf Mold",
+        "description": "Pale yellow spots on upper leaf surface. Olive-green to brown velvety mold on the underside of the spots.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Pale yellow spots on upper leaf surface. Olive-green to brown velvety mold on the underside of the spots."
+    },
+    "Tomato___Septoria_leaf_spot": {
+        "name": "Tomato - Septoria leaf spot",
+        "description": "Numerous small, circular spots with dark borders and gray centers. Lower leaves affected first.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Numerous small, circular spots with dark borders and gray centers. Lower leaves affected first."
+    },
+    "Tomato___Spider_mites Two-spotted_spider_mite": {
+        "name": "Tomato - Spider mites Two-spotted spider mite",
+        "description": "Leaves look stippled (tiny yellow dots). Fine webbing may be visible. Mites are tiny red/yellow specks.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Leaves look stippled (tiny yellow dots). Fine webbing may be visible. Mites are tiny red/yellow specks."
+    },
+    "Tomato___Target_Spot": {
+        "name": "Tomato - Target Spot",
+        "description": "Brown to black lesions with concentric rings, similar to early blight but often with a yellow halo.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Brown to black lesions with concentric rings, similar to early blight but often with a yellow halo."
+    },
+    "Tomato___Tomato_Yellow_Leaf_Curl_Virus": {
+        "name": "Tomato - Tomato Yellow Leaf Curl Virus",
+        "description": "Leaves curl upward and turn yellow at the edges. Plants are stunted. Flowers may drop.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Leaves curl upward and turn yellow at the edges. Plants are stunted. Flowers may drop."
+    },
+    "Tomato___Tomato_mosaic_virus": {
+        "name": "Tomato - Tomato mosaic virus",
+        "description": "Mottled light and dark green pattern on leaves (mosaic). Leaves may be filiform (stringy) or fern-like.",
+        "treatment": "Isolate the plant. Remove affected leaves. Apply appropriate fungicide or organic remedy.",
+        "symptoms": "Mottled light and dark green pattern on leaves (mosaic). Leaves may be filiform (stringy) or fern-like."
+    },
+    "Tomato___healthy": {
+        "name": "Tomato - healthy",
+        "description": "Vigorous growth. Compound green leaves. No dark spots. No yellowing. No curling. No mosaic pattern. No mold.",
+        "treatment": "Continue regular care (watering, sunlight).",
+        "symptoms": "Vigorous growth. Compound green leaves. No dark spots. No yellowing. No curling. No mosaic pattern. No mold."
+    }
+}
