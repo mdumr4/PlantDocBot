@@ -13,9 +13,16 @@ PlantDocBot is an advanced AI assistant that diagnoses plant diseases using:
     ```
 
 2.  **Model Setup**
-    Ensure the `Model/` directory contains:
-    *   `plant_doctor_model.pth` (Visual Model)
-    *   `plant_disease_bert/` (Text Model Folder - Downloaded from Colab)
+    Since model files are large, they are **not included** in this repository. You have two options:
+
+    *   **Option A: Train them yourself (Recommended)**
+        *   Run `training/train_visual_model.py` in Colab to generate `plant_doctor_model.pth`.
+        *   Run `training/train_text_model.py` in Colab to generate the `plant_disease_bert` folder.
+        *   Place them in the `models/` directory.
+
+    *   **Option B: Download Pre-trained Weights**
+        *   [Link to Google Drive](https://drive.google.com/drive/folders/1TBWM30fXpK_mGARJQryr7iU2HtItPa1X?usp=sharing)
+        *   Download and extract into `models/`.
 
 3.  **Run the App**
     ```bash
