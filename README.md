@@ -212,7 +212,6 @@ Infosys-PlantBot/
 │   ├── train_visual_model.py      # ResNet34 training pipeline
 │   ├── train_text_model.py        # DistilBERT fine-tuning pipeline
 │   └── update_symptoms.py         # Knowledge base symptom enrichment script
-├── .agent/rules/                  # Project-specific AI governance & architecture rules
 ├── docs/                          # Project specifications & certifications
 │   ├── AI_PlantDocBot_Specification.pdf # Infosys milestone project requirements
 │   └── certificates/              # Infosys Springboard completion credentials

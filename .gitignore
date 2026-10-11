@@ -45,3 +45,7 @@ plant_doctor_model.pth
 Thumbs.db
 Desktop.ini
 .DS_Store
+
+# AI Assistant & IDE
+.agent/
+.agents/
