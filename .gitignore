@@ -1,10 +1,8 @@
 # Python
 __pycache__/
 *.py[cod]
-*$py.class
-*.so
+*.class
 .Python
-env/
 build/
 develop-eggs/
 dist/
@@ -23,6 +21,8 @@ wheels/
 
 # Virtual Environment
 venv/
+.venv/
+env/
 .env
 
 # Streamlit
@@ -44,3 +44,4 @@ plant_doctor_model.pth
 # OS
 Thumbs.db
 Desktop.ini
+.DS_Store

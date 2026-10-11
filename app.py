@@ -1,4 +1,3 @@
-
 import streamlit as st
 from PIL import Image
 import torch
@@ -54,7 +53,7 @@ model_viz, model_text, bert_pipe, class_names, disease_info, kb_embeddings, stat
 # UI LAYOUT
 # ==========================================
 st.markdown("<h1 class='title-text'>🌿 PlantDocBot</h1>", unsafe_allow_html=True)
-st.markdown("<p class='subtitle-text'>Multi-Modal Diagnosis: Image, Text, or Both</p>", unsafe_allow_html=True)
+st.markdown("<p class='subtitle-text'>Multi-Modal Diagnosis: Image, Text, or Hybrid Fusion</p>", unsafe_allow_html=True)
 
 # --- SIDEBAR ---
 with st.sidebar:
@@ -67,7 +66,7 @@ with st.sidebar:
         st.error(f"❌ Error: {status}")
 
 # --- TABS ---
-tab1, tab2, tab3 = st.tabs(["📷 Image Only", "📝 Text Only", "🧪 Hybrid (Best)"])
+tab1, tab2, tab3 = st.tabs(["📷 Image Only", "💬 Text Only", "🧬 Hybrid (Best)"])
 
 # 1. IMAGE ONLY
 with tab1:
@@ -95,7 +94,7 @@ with tab1:
 # 2. TEXT ONLY
 with tab2:
     user_text = st.text_area("Describe the symptoms", placeholder="e.g. Tomato leaves have dark brown circles...")
-    if user_text and st.button("Analyze Symptoms 📝"):
+    if user_text and st.button("Analyze Symptoms 💬"):
         if bert_pipe:
             best_class, best_score, _ = predict_text_bert(bert_pipe, user_text, class_names)
             st.caption("Used Custom BERT Model")
@@ -118,7 +117,7 @@ with tab3:
     h_file = st.file_uploader("Upload Leaf Image", type=["jpg", "png", "jpeg"], key="hybrid_img")
     h_text = st.text_area("Describe Symptoms (Optional)", key="hybrid_txt")
 
-    if h_file and st.button("Run Hybrid Analysis 🧪"):
+    if h_file and st.button("Run Hybrid Analysis 🧬"):
         # Image
         image = Image.open(h_file).convert('RGB')
         st.image(image, width="stretch")
@@ -129,9 +128,6 @@ with tab3:
         if h_text.strip():
             if bert_pipe:
                 _, _, b_idx = predict_text_bert(bert_pipe, h_text, class_names)
-                text_scores[b_idx] = 1.0 # Give full weight to predicted class (simplification for hybrid)
-                # Note: For smoother hybrid, maybe we want raw logits? But simplified is okay.
-                # Actually, BERT score is ~0.99 usually.
                 pred = bert_pipe(h_text)[0]
                 text_scores[b_idx] = pred['score']
                 st.caption("Mixed with BERT Prediction")
@@ -139,7 +135,7 @@ with tab3:
                 _, _, cos_scores, _ = predict_text_sbert(model_text, kb_embeddings, h_text, class_names)
                 text_scores = np.maximum(cos_scores, 0)
         else:
-             st.caption("⚠️ No text provided. Using 100% Image Mode.")
+            st.caption("ℹ️ No text provided. Using 100% Image Mode.")
 
         # Weighted Combination
         if h_text.strip():
