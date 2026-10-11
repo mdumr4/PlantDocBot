@@ -1,3 +1,7 @@
+---
+trigger: always_on
+---
+
 # AGENTS.md - Repository Architecture & Development Guidelines
 
 This repository implements **PlantDocBot**, a multimodal AI diagnostic platform developed during the **Infosys Springboard** program. It integrates Computer Vision (ResNet34) and Natural Language Processing (Fine-tuned DistilBERT / Sentence-Transformers) with a Streamlit interface.
